@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MongoDB의 insert Many을 활용하여 빠르게 저장하기</title>
+    <link rel="stylesheet" href="/css/table.css"/>
+    <script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $("#btnDropCollection").on("click", function () {
+                $.ajax({
+                    url: "/melon/v1/dropCollection",
+                    type: "post",
+                    dataType: "JSON",
+                }).then(
+                    function (json) {
+                        alert(json.data.msg);
+                    }, function (json) {
+
+                    }
+                )
+            }
+        });
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
